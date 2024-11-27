@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #232526, #414345);
+    color: #f4f4f4;
+}
+
+header {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f44336;
+}
+
+main {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f44336;
+}
+
+.text-animation {
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+.text-animation p {
+    background: rgba(25, 25, 25, 0.8); /* Color oscuro con opacidad */
+    padding: 15px; /* Espaciado interno para mejorar la legibilidad */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideIn 1s ease-out forwards;
+    color: #f4f4f4; /* Color del texto para mejor contraste */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para el color y el levantamiento */
+}
+
+.text-animation p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.text-animation p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.text-animation p:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.text-animation p:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.text-animation p:nth-child(5) {
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background: #1b1b1b;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+}

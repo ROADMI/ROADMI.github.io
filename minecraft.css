@@ -1,0 +1,236 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animación al pasar el mouse */
+@keyframes hoverEffect {
+    from { color: #333; }
+    to { color: #e60012; }
+}
+
+h1 {
+    transition: color 0.3s ease;
+}
+
+h1.hover {
+    animation: hoverEffect 0.3s forwards;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ajusta la altura del encabezado */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('header-background.jpg') no-repeat center center;
+    background-size: cover;
+    animation: headerImageAnimation 10s linear infinite; /* Velocidad de la animación */
+}
+
+@keyframes headerImageAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%; /* Mueve la imagen de arriba hacia abajo */
+    }
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 5em; /* Tamaño de fuente más grande */
+    font-family: 'Poppins', sans-serif; /* Fuente vistosa */
+    margin: 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 20px; /* Ajusta según el espacio que desees arriba */
+    right: 20px; /* Ajusta según el espacio que desees a la derecha */
+    background: transparent; /* Eliminado fondo negro */
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e60012; /* Color al pasar el mouse */
+}
+
+/* Animación al hacer scroll */
+.header-scroll {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+.header-scroll.scrolled {
+    transform: translateY(-20px); /* Ajusta el valor para mayor o menor efecto */
+}
+
+main {
+    padding: 40px 0;
+}
+
+section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #e60012; /* Rojo para los títulos de sección */
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; /* Fuente vistosa */
+}
+
+.tutorial-grid, .media-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tutorial-card, .media-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card img, .media-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover, .media-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover video {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333333; /* Fondo negro para el footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('footer-background.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+#gameplay {
+    position: relative;
+    background: url('minecraft-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    background-attachment: fixed; /* Para el efecto de "bajón" */
+    animation: backgroundZoom 15s infinite;
+}
+
+@keyframes backgroundZoom {
+    0% { background-size: 120%; }
+    50% { background-size: 100%; }
+    100% { background-size: 120%; }
+}
